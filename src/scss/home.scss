@@ -1,3 +1,138 @@
 //====================================================================================================
-
+.main-block {
+ @include background(url("../img/main-block/main-block-bg.jpg"));
+ height: rem(703);
+ @include adaptiveValue("padding-bottom", 47, 24);
+ padding-top: rem(24);
+ @media (max-width: $mobile) {
+  height: auto; 
+ }
+ // .main-block__container
+ &__container {
+  height: 100%;
+ }
+  // .main-block__inner
+ &__inner {
+  display: flex;
+  align-items: flex-end;
+  @include adaptiveValue("gap", 70, 20);
+  height: 100%;
+  @media (max-width: $tablet) {
+   flex-direction: column;
+   align-items: flex-start;
+   }
+  }
+ // .main-block__header
+ &__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(26);
+  margin-bottom: rem(35);
+  @media (max-width: $tablet) {
+   justify-content: flex-start;
+  }
+  @media (max-width: $mobile) {
+   flex-direction: column-reverse;
+  }
+ }
+ // .main-block__logo
+ &__logo {
+  @media (max-width: $mobileSmall) {
+   width: 100%;
+  }
+ }
+ // .main-block__title
+ &__title {
+  @include adaptiveValue("font-size", 33, 20);
+  line-height: math.div(49, 33);
+  @extend %gilroy-semibold;
+  color: $btnColor;
+  max-width: rem(321);
+  @media (max-width: $tablet) {
+   max-width: 100%;
+  }
+ }
+ // .main-block__content
+ &__content {
+  max-width: rem(550);
+  width: 100%;
+  @media (max-width: $tablet) {
+   max-width: 100%;
+   order: -1;
+  }
+ }
+ // .main-block__box 
+ &__box {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  max-width: rem(550);
+  width: 100%;
+  height: rem(488);
+  z-index: 4;
+  @media (max-width: $tablet) {
+   justify-content: center;
+   max-width: 100%;
+  }
+  @media (max-width: $mobile) {
+   height: auto; 
+  }
+ }
+ // .main-block__btn
+ &__btn {
+  z-index: 1;
+ }
+ // .main-block__list
+ &__list {
+  padding-left: rem(35);
+ }
+ // .main-block__item
+ &__item {
+  font-size: rem(16);
+  line-height: math.div(24, 16);
+  color: #685A7B;
+  position: relative;
+  span {
+   @extend %gilroy-semibold;
+  }
+  &::before {
+   @include pseudo;
+   @include background(url("../img/main-block/star.png"));
+   width: rem(15);
+   height: rem(15);
+   left: rem(-38);
+   top: rem(5);
+  }
+  &:not(:last-child) {
+   margin-bottom: rem(16);
+  }
+ }
+ // .main-block__image-fly
+ &__image-fly {
+  position: absolute;
+  left: 50%;
+  top: 9%;
+  transform: translateX(-50%);
+  @media (max-width: $tablet) {
+   display: none;
+  }
+ }
+ // .main-block__image-family
+ &__image-family {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  z-index: -1;
+  width: 100%;
+  @media (max-width: $tablet) {
+   width: 30%;
+   bottom: 22%;
+   left: 36%;
+  }
+  @media (max-width: $mobile) {
+   display: none;
+  }
+ }
+}
 //====================================================================================================

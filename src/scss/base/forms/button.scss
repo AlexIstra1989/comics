@@ -1,11 +1,25 @@
 //<BUTTONS (a.btn+tab)>
 // Снипет (HTML): btn
 
-.button {
+.btn {
+ @include adaptiveValue("font-size", 20, 18);
+ line-height: math.div(32, 20);
+ color: $headerColor;
 	display: inline-flex;
-	padding: 0px 0px;
+	padding: 24px 69px;
+ background-color: $btnColor;
+ border: 3px solid #434343;
+ box-shadow: 4px 4px 10px #524267;
+ border-radius: 120px;
+ cursor: pointer;
+ max-width: rem(550);
+ width: 100%;
+ justify-content: center;
+ transition: all 0.5s;
 	@media (any-hover: hover) {
 		&:hover {
+   background-color: $headerColor;
+   color: $btnColor;
 		}
 	}
 	&._fw {

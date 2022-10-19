@@ -47,7 +47,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 4;
+  z-index: 6;
   @media (max-width: $mobile) {
    position: inherit;
    left: 0;
@@ -102,7 +102,7 @@
   overflow: auto;
   background-color: $btnColor;
   padding: rem(100) rem(15) rem(50) rem(15) ;
-  z-index: 3;
+  z-index: 5;
   transition: left 0.5s;
   &::before {
    @include pseudo;

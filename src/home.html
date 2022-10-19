@@ -7,11 +7,37 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-    
+    <section class="main-block">
+     <div class="main-block__container">
+      <img class="main-block__image-fly" src="img/main-block/fly.png" alt="муха">
+      <div class="main-block__inner">
+       <div class="main-block__box">
+        <img class="main-block__image-family" src="img/main-block/family.png" alt="семья"> 
+        <a class="main-block__btn btn">ВЫБРАТЬ ПОДПИСКУ</a>
+       </div>
+       <div class="main-block__content">
+        <div class="main-block__header">
+         <img class="main-block__logo" src="img/main-block/logo.jpg" alt="логотип">
+         <h1 class="main-block__title">КОМИКСЫ ДЛЯ МАЛЬЧИШЕК</h1>
+        </div> 
+        <ul class="main-block__list">
+         <li class="main-block__item">развлекательный формат поучительных историй 
+          <span>от опытных многодетных отцов</span></li>
+         <li class="main-block__item">разработаны совместно с <span>практикующим детским психологом</span></li>
+         <li class="main-block__item">МНОГОДЕТНЫЕ ОТЦЫ и ПСИХОЛОГ
+          поделятся с вами своими секретными фишками - как найти <span>общий язык</span> с парнями 
+          и уже с малых лет растить их <span>настоящими мужчинами</span></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </section>
+    <a href="#" data-popup="#popup" class="link">Я открываю попап</a>
+   
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
+  @@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>
