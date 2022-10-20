@@ -136,3 +136,111 @@
  }
 }
 //====================================================================================================
+.video {
+ background: linear-gradient(180deg, #ADD2E4 0%, rgba(173, 210, 228, 0) 100%);
+ height: rem(730);
+ margin-top: rem(-1);
+ position: relative;
+ &::before {
+  @include pseudo;
+  @include background(url("../img/sky.png"));
+  width: rem(1200);
+  height: rem(612);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+ }
+ // .video__link
+ &__link {
+ }
+}
+//=======================================================================================================
+.about {
+ background-color: #ADD2E4;
+ position: relative;
+ padding-top: rem(24);
+ @include adaptiveValue("padding-bottom", 80, 24);
+ &::before {
+  @include pseudo;
+  @include background(url("../img/about/about-bg.png"));
+  width: 100%;
+  height: 100%;
+ }
+ // .about__container
+ &__container {
+ }
+ // .about__title-box
+ &__title-box {
+  position: relative;
+  width: rem(540);
+  height: rem(185);
+  &::before {
+   @include pseudo;
+   @include background(url("../img/about/cite.png"));
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+  }
+ }
+ // .about__title
+ &__title {
+  @extend %housearama-regular;
+  @include adaptiveValue("font-size", 28, 24);
+  line-height: math.div(40, 28);
+  color: $subtitleColor;
+  max-width: rem(290);
+  width: 100%;
+ }
+ // .about__inner
+ &__inner {
+ }
+}
+//====================================================================================================================
+.author {
+ // .author__header
+ &__header {
+ }
+ // .author__image
+ &__image {
+ }
+ // .author__info
+ &__info {
+ }
+ // .author__name
+ &__name {
+ }
+ // .author__position
+ &__position {
+ }
+ // .author__citation
+ &__citation {
+ }
+ // .author__text
+ &__text {
+ }
+}
+//==================================================================================================================
+.ages {
+ // .ages__item
+ &__item {
+ }
+ // .ages__header
+ &__header {
+ }
+ // .ages__image
+ &__image {
+ }
+ // .ages__info
+ &__info {
+ }
+ // .ages__info-title
+ &__info-title {
+ }
+ // .ages__info-text
+ &__info-text {
+ }
+ // .ages__text
+ &__text {
+ }
+}
