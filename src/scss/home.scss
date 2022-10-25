@@ -832,8 +832,9 @@
    @include adaptiveValue("padding-bottom", 17, 10);
    @include adaptiveValue("padding-left", 225, 100);
    margin-left: rem(23);
-   //@include adaptiveValue("padding-left", 90, 20);
-   //padding: rem(25) rem(55) rem(17) rem(90);
+   @media (max-width: $mobileSmall) {
+    padding-left: rem(90);
+   }
   }
   &_right {
    //max-width: rem(430);
