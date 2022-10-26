@@ -36,6 +36,10 @@
  }
  // .header__item
  &__item {
+  transition: all 0.5s;
+  &:hover {
+   text-decoration: underline;
+  }
   @media (max-width: $mobile) {
    border-top: rem(1) solid $headerColor;
    padding: rem(20) 0;
