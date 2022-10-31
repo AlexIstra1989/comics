@@ -1,3 +1,6 @@
+* {
+ border: 1px solid red;
+}
 //====================================================================================================
 .main-block {
  @include background(url("../img/main-block/main-block-bg.jpg"));
@@ -144,7 +147,8 @@
  &::before {
   @include pseudo;
   @include background(url("../img/sky.png"));
-  width: rem(1200);
+  background-size: contain;
+  width: 100%;
   height: rem(612);
   left: 50%;
   top: 50%;
@@ -1331,21 +1335,59 @@
  }
 }
 .spollers {
+ display: grid;
+	gap: 40px;
  // .spollers__item
  &__item {
   background: rgba(255, 255, 255, 0.5);
-  border: 3px solid #434343;
+  border: rem(3) solid #434343;
   backdrop-filter: blur(2px);
-  border-radius: 40px;
+  border-radius: rem(40);
+  transition: all 0.5s;
+  cursor: pointer;
+  &:hover {
+   border-color: $primaryColor;
+  }
  }
  // .spollers__title
  &__title {
   display: flex;
-  padding: rem(28) rem(45);
+  padding: rem(28) rem(45);    
+  width: 100%;
+  position: relative;
+  ._spoller-init & {
+   cursor: pointer;
+   &::before,
+   &::after {
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    background-color: $primaryColor;
+    height: 4px;
+    width: 40px;
+    transition: transform 0.5s ease 0s;
+   }
+   &::before {
+    transform:  rotate(90deg);
+   }
+   &::after {
+    transform: rotate(-180deg);
+   }
+   &._spoller-active {
+    &::before {
+     transform:  rotate(-40deg);
+    }
+    &::after {
+     transform: rotate(40deg);
+    }
+   }
+  }
  }
  // .spollers__client-name
  &__client-name {
   @extend %housearama-regular;
+  @include adaptiveValue("margin-right", 50, 20);
   font-size: rem(20);
   font-weight: 800;
   line-height: math.div(20, 20);
@@ -1358,14 +1400,10 @@
   line-height: math.div(24, 20);
 
  }
- // .spollers__btn
- &__btn {
-  color: $primaryColor;
-  
- }
  // .spollers__body
  &__body {
   padding: rem(30) rem(45);
+  border-top: rem(3) solid #434343;
  }
  // .spollers__name
  &__name {
@@ -1377,7 +1415,5 @@
   margin-bottom: rem(18);
   -webkit-text-stroke: rem(0.7) $mainColor;
  }
- // .spollers__text
- &__text {
- }
 }
+//==========================================================================

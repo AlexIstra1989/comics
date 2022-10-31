@@ -1,3 +1,134 @@
 //====================================================================================================
+.footer {
+ background-color: $btnColor;
+ position: relative;
+ top: -620px;
+ // .footer__container
+ &__container {
+ }
+ // .footer__inner
+ &__inner {
+  //display: grid;
+  //grid-template-columns: minmax(300px, 560px) minmax(500px, 1000px);
+ }
+ // .footer__contacts
+ &__contacts {
 
+ }
+ // .footer__map
+ &__map {
+
+ }
+}
+//==============================================================================================
+.contacts {
+ // .contacts__container 
+ &__container {
+  max-width: 560px;
+  margin: 0 0 0 auto;
+  @include adaptiveValue("padding-top", 100, 40);
+ }
+ // .contacts__box
+ &__box {
+  max-width: rem(434);
+  width: 100%;
+  height: rem(123);
+  position: relative;
+  z-index: 1;
+  left: -12%;
+  @include adaptiveValue("margin-bottom", 50, 30);
+ }
+ // .contacts__title
+ &__title {
+  @extend %housearama-regular; 
+  @include adaptiveValue("font-size", 28, 18);
+  font-weight: 800;
+  line-height: math.div(40, 28);
+  text-transform: uppercase;
+  @include adaptiveValue("padding-top", 30, 20);
+  //@include adaptiveValue("padding-right", 100, 27);
+  @include adaptiveValue("padding-bottom", 44, 12);
+  @include adaptiveValue("padding-left", 150, 80);
+ }
+ // .contacts__box-image
+ &__box-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+ }
+ // .contacts__list
+ &__list {
+  font-weight: 800;
+  @extend %housearama-regular;
+  color: $headerColor ;
+  display: grid;
+  gap: rem(30);
+  margin-bottom: rem(100);
+ }
+ // .contacts__item
+ &__item {
+  line-height: math.div(40, 18);
+  padding-left: rem(60);
+  text-transform: uppercase;
+ }
+ // .contacts__phone,
+ // .contacts__email,
+ // .contacts__address
+ &__phone, 
+ &__email,
+ &__address {
+  position: relative;
+  &::before {
+   @include pseudo;
+   @include background(url("../img/footer/phone.svg"));
+   width: rem(30);
+   height: rem(30);
+   left: rem(-40);
+   top: 0;
+  }
+ }
+ &__email::before {
+  @include background(url("../img/footer/letter.svg"));
+  height: rem(23);
+ }
+ &__address {
+  max-width: rem(260);
+  &::before {
+   @include background(url("../img/footer/map.svg"));
+   height: rem(28);
+  }
+ }
+ // .contacts__bottom
+ &__bottom {
+  display: flex;
+  justify-content: space-between;
+ }
+ // .contacts__social
+ &__social {
+  display: flex;
+  gap: rem(20);
+ }
+ // .contacts__social-item
+ &__social-item {
+ }
+ // .contacts__social-link
+ &__social-link {
+ }
+ // .contacts__documents
+ &__documents {
+ }
+ // .contacts__documents-item
+ &__documents-item {
+  text-decoration: underline;
+ }
+ // .contacts__documents-link
+ &__documents-link {
+  font-size: rem(16);
+  line-height: math.div(23, 16);
+  color: $headerColor;
+ }
+}
 //====================================================================================================
