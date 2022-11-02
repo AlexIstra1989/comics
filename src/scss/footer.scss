@@ -22,6 +22,8 @@
 }
 //==============================================================================================
 .contacts {
+ width: rem(560);
+ margin-left: auto;
  // .contacts__container 
  &__container {
   max-width: 560px;
