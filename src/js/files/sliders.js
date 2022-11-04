@@ -86,15 +86,11 @@ function initSliders() {
 				},
 				768: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 10,
 				},
-				// 1500: {
-				// 	slidesPerView: 5,
-				// 	spaceBetween: 20,
-				// },
-    1900: {
+				1500: {
 					slidesPerView: 3,
-					spaceBetween: 30,
+					spaceBetween: 20,
 				},
 			},
 

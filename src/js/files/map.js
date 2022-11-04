@@ -80,7 +80,7 @@ if (document.querySelector('#map')) {
 }
 
 
-/* YA
+ YA
 function map(n) {
 	ymaps.ready(init);
 	function init() {
@@ -101,7 +101,7 @@ function map(n) {
 		},{
 			// Опции.
 			//balloonContentHeader: 'Mistoun',
-			//balloonContentBody: 'Москва, Николоямская 40с1',
+			balloonContentBody: 'Москва, Николоямская 40с1',
 			//balloonContentFooter: '+ 7(495) 507-54 - 90',
 			//hasBalloon: true,
 			//hideIconOnBalloonOpen: true,
@@ -126,4 +126,3 @@ function map(n) {
 		myMap.behaviors.disable('drag');
 	}
 }
-*/
