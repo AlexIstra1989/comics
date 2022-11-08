@@ -4,7 +4,9 @@
 	"title":"Главная"
 	})
 	<body>
-			@@include('html/_header.htm',{})
+  <div class="wrapper">
+   @@include('html/_header.htm',{})
+   <!-- <a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">Open YouTube video</a> -->
 			<main class="page">
     <section class="main-block">
      <div class="main-block__container">
@@ -31,8 +33,10 @@
       </div>
      </div>
     </section>
-    <div class="video">
-     <a data-popup="#popup" class="video__link" href="#">Я открываю попап</a>
+    <div class="popup">
+     <a class="popup-youtube"  rel="nofollow" href="https://www.youtube.com/watch?v=poVWgX2k_UI">
+      <img src="img/video/popup.png" alt="#">
+     </a>
     </div>
     <section class="project">
      <div class="project__container">
@@ -444,9 +448,9 @@
       </div>
      </div>
     </section> 
-			</main>
+			</main>  -->
+  </div>
 		@@include('html/_footer.htm',{})
-  @@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

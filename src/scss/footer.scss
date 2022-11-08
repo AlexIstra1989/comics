@@ -22,10 +22,6 @@
    display: block;
   }
  }
- // .footer__contacts
- &__contacts {
-
- }
  // .footer__map
  &__map {
   @include adaptiveValue("max-width", 960, 360);
@@ -135,12 +131,6 @@
   @media (max-width: $mobileSmall) {
    margin-bottom: rem(20);
   }
- }
- // .contacts__social-item
- &__social-item {
- }
- // .contacts__social-link
- &__social-link {
  }
  // .contacts__documents
  &__documents {
